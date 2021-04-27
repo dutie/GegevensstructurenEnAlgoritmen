@@ -1,0 +1,7 @@
+\babel@toc {dutch}{}
+\contentsline {section}{\numberline {1}Inleiding}{2}{}%
+\contentsline {section}{\numberline {2}Methode}{2}{}%
+\contentsline {section}{\numberline {3}Resultaten}{3}{}%
+\contentsline {section}{\numberline {4}Bespreking van de resultaten}{4}{}%
+\contentsline {subsection}{\numberline {4.1}Complexiteit van de prioriteitsfuncties}{4}{}%
+\contentsline {subsection}{\numberline {4.2}Implementatie isSolvable}{4}{}%
