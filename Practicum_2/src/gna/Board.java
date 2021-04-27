@@ -41,7 +41,7 @@ public class Board {
 			}
 		}
 
-		return hammingSum + this.getMovesMade();
+		return hammingSum;
 	}
 
 	// return sum of Manhattan distances between blocks and goal
@@ -50,12 +50,12 @@ public class Board {
 		for (int i = 0; i < tiles.length; i++) {
 			for (int j = 0; j < tiles.length; j++) {
 				if (tiles[i][j] != 0) {
-					manhattanDistance = Math.abs(i - ((tiles[i][j] - 1) - ((tiles[i][j] - 1) % tiles.length)) / tiles.length)
+					manhattanDistance += Math.abs(i - ((tiles[i][j] - 1) / tiles.length))
 							+ Math.abs(j - ((tiles[i][j] - 1) % tiles.length));
 				}
 			}
 		}
-		return manhattanDistance + this.getMovesMade();
+		return manhattanDistance;
 	}
 
 	// Does this board equal y. Two boards are equal when they both were constructed

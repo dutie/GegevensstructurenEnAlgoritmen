@@ -17,17 +17,18 @@ public class Solver
 			throw new NullPointerException("[Solver] initial board is empty. ");
 
 		BoardComparator boardComparator = new BoardComparator(priority);
-		PriorityQueue<Board> frontier = new PriorityQueue<>(1000, boardComparator);
-		HashSet<Board> explored = new HashSet<>();
+		PriorityQueue<Board> frontier = new PriorityQueue<>(boardComparator);
+		HashSet<Board> expanded = new HashSet<>();
 
 		frontier.add(initial);
+		expanded.add(initial);
 
 		initial.setSolution();
 		Board solution = new Board(initial.getSolution());
 		Board state = null;
+
 		while(! frontier.isEmpty()){
 			state = frontier.poll();
-			explored.add(state);
 
 			if(state.equals(solution)){
 				break;
@@ -35,14 +36,15 @@ public class Solver
 
 
 			for(Board neighbor : state.neighbors()){
-				if(!(frontier.contains(neighbor)) && !(explored.contains(neighbor))){
+				if(!(expanded.contains(neighbor))){
 					frontier.add(neighbor);
+					expanded.add(neighbor);
 				}
-				else if(frontier.contains(neighbor)){
-					frontier.remove(neighbor);
-					neighbor.updateMovesMade(state.getMovesMade());
-					frontier.add(neighbor);
-				}
+//				else if(frontier.contains(neighbor)){
+//					frontier.remove(neighbor);
+//					neighbor.updateMovesMade(state.getMovesMade());
+//					frontier.add(neighbor);
+//				}
 			}
 		}
 
@@ -79,20 +81,17 @@ public class Solver
 	}
 
 
+
 		/**
 		 * Returns a List of board positions as the solution. It should contain the initial
 		 * Board as well as the solution (if these are equal only one Board is returned).
 		 */
 		public List<Board> solution ()
 		{
-			List<Board> ordered = new ArrayList<>();
-
-			while(orderBoards.size() > 0){
-				ordered.add(orderBoards.pop());
-			}
-			return ordered;
+			List<Board> solution = new ArrayList<>(orderBoards);
+			Collections.reverse(solution);
+			return solution;
 		}
-
 
 	}
 

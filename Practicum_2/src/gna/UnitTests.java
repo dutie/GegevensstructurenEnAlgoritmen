@@ -186,4 +186,22 @@ public class UnitTests {
   }
 
 
+  @Test
+  public void testingGivenPuzzles(){
+//    Main.main(new String[]{"boards/puzzle3x3-impossible.txt"});
+    Main.main(new String[]{"boards/puzzle04.txt"});
+    Main.main(new String[]{"boards/puzzle20.txt"});
+    Main.main(new String[]{"boards/puzzle22.txt"});
+    Main.main(new String[]{"boards/puzzle24.txt"});
+    Main.main(new String[]{"boards/puzzle26.txt"});
+    Main.main(new String[]{"boards/puzzle28.txt"});
+    Main.main(new String[]{"boards/puzzle30.txt"});
+    Main.main(new String[]{"boards/puzzle32.txt"});
+    Main.main(new String[]{"boards/puzzle34.txt"});
+    Main.main(new String[]{"boards/puzzle36.txt"});
+    Main.main(new String[]{"boards/puzzle38.txt"});
+    Main.main(new String[]{"boards/puzzle40.txt"});
+    Main.main(new String[]{"boards/puzzle42.txt"});
+  }
+
 }
