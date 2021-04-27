@@ -33,6 +33,7 @@ public class Solver
 				break;
 			}
 
+
 			for(Board neighbor : state.neighbors()){
 				if(!(frontier.contains(neighbor)) && !(explored.contains(neighbor))){
 					frontier.add(neighbor);
