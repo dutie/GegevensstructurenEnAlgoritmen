@@ -40,11 +40,11 @@ public class Solver
 					frontier.add(neighbor);
 					expanded.add(neighbor);
 				}
-//				else if(frontier.contains(neighbor)){
-//					frontier.remove(neighbor);
-//					neighbor.updateMovesMade(state.getMovesMade());
-//					frontier.add(neighbor);
-//				}
+				else if(frontier.contains(neighbor)){
+					frontier.remove(neighbor);
+					neighbor.updateMovesMade(state);
+					frontier.add(neighbor);
+				}
 			}
 		}
 

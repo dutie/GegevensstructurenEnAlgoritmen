@@ -4,6 +4,7 @@ import libpract.PriorityFunc;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 /**
@@ -187,20 +188,34 @@ public class UnitTests {
 
 
   @Test
-  public void testingGivenPuzzles(){
-//    Main.main(new String[]{"boards/puzzle3x3-impossible.txt"});
+  public void testingGivenPuzzles() throws FileNotFoundException {
+    System.out.println("#===Test: impossible:===#");
+    Main.main(new String[]{"boards/puzzle3x3-impossible.txt"});
+    System.out.println("#===Test: 04:===#");
     Main.main(new String[]{"boards/puzzle04.txt"});
+    System.out.println("#===Test: 20:===#");
     Main.main(new String[]{"boards/puzzle20.txt"});
+    System.out.println("#===Test: 22:===#");
     Main.main(new String[]{"boards/puzzle22.txt"});
+    System.out.println("#===Test: 24:===#");
     Main.main(new String[]{"boards/puzzle24.txt"});
+    System.out.println("#===Test: 26:===#");
     Main.main(new String[]{"boards/puzzle26.txt"});
+    System.out.println("#===Test: 28:===#");
     Main.main(new String[]{"boards/puzzle28.txt"});
+    System.out.println("#===Test: 30:===#");
     Main.main(new String[]{"boards/puzzle30.txt"});
+    System.out.println("#===Test: 32:===#");
     Main.main(new String[]{"boards/puzzle32.txt"});
+    System.out.println("#===Test: 34:===#");
     Main.main(new String[]{"boards/puzzle34.txt"});
+    System.out.println("#===Test: 36:===#");
     Main.main(new String[]{"boards/puzzle36.txt"});
+    System.out.println("#===Test: 38:===#");
     Main.main(new String[]{"boards/puzzle38.txt"});
+    System.out.println("#===Test: 40:===#");
     Main.main(new String[]{"boards/puzzle40.txt"});
+    System.out.println("#===Test: 42:===#");
     Main.main(new String[]{"boards/puzzle42.txt"});
   }
 

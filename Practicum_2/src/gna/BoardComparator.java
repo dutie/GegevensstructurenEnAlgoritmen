@@ -29,9 +29,9 @@ public class BoardComparator implements Comparator<Board> {
         if(o1 == null|| o2 == null) throw new NullPointerException("[Solver] Found an empty board in the priorityqueue.");
         if(o2.getClass() != o2.getClass()) throw new ClassCastException("[Solver] Found a wrong class for the board in the priorityqueue.");
         if(this.hamming){
-            return Integer.compare(o1.hamming(), o2.hamming());
+            return Integer.compare(o1.hamming() + o1.getMovesMade(), o2.hamming() + o2.getMovesMade());
         }else{
-            return Integer.compare(o1.manhattan(), o2.manhattan());
+            return Integer.compare(o1.manhattan() + o1.getMovesMade(), o2.manhattan()+ o2.getMovesMade());
         }
     }
 

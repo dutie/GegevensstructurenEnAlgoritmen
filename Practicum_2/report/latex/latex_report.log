@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.26)  25 APR 2021 23:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.26)  28 APR 2021 05:04
 entering extended mode
-**"c:/Users/matsf/Documents/School/School_Shared/OneDrive/Schakeljaar/Sem2/Gegevensstructuren en algoritmen/Practica/Practicum_2/report/latex/latex_report.tex"
-("c:/Users/matsf/Documents/School/School_Shared/OneDrive/Schakeljaar/Sem2/Gegevensstructuren en algoritmen/Practica/Practicum_2/report/latex/latex_report.tex"
+**"c:/Users/matsf/Documents/School/School_Shared/OneDrive/Schakeljaar/Sem2/Gegevensstructuren en algoritmen/Practica/GegevensstructurenEnAlgoritmen/Practicum_2/report/latex/latex_report.tex"
+("c:/Users/matsf/Documents/School/School_Shared/OneDrive/Schakeljaar/Sem2/Gegevensstructuren en algoritmen/Practica/GegevensstructurenEnAlgoritmen/Practicum_2/report/latex/latex_report.tex"
 LaTeX2e <2020-10-01> patch level 2
 L3 programming layer <2020-10-27> xparse <2020-03-03> (C:\Users\matsf\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
@@ -443,7 +443,7 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
 \l__kernel_color_stack_int=\count304
 \l__pdf_internal_box=\box64
-) ("c:/Users\matsf\Documents\School\School_Shared\OneDrive\Schakeljaar\Sem2\Gegevensstructuren en algoritmen\Practica\Practicum_2\report\latex\latex_report.aux")
+) ("c:/Users\matsf\Documents\School\School_Shared\OneDrive\Schakeljaar\Sem2\Gegevensstructuren en algoritmen\Practica\GegevensstructurenEnAlgoritmen\Practicum_2\report\latex\latex_report.aux")
 \openout1 = `latex_report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -483,7 +483,7 @@ Package pgfplots Warning: running in backwards compatibility mode (unsuitable ti
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-("c:/Users\matsf\Documents\School\School_Shared\OneDrive\Schakeljaar\Sem2\Gegevensstructuren en algoritmen\Practica\Practicum_2\report\latex\titlepage.tex"
+("c:/Users\matsf\Documents\School\School_Shared\OneDrive\Schakeljaar\Sem2\Gegevensstructuren en algoritmen\Practica\GegevensstructurenEnAlgoritmen\Practicum_2\report\latex\titlepage.tex"
 <sedes.pdf, id=4, 310.15875pt x 521.95pt>
 File: sedes.pdf Graphic file (type pdf)
 <use sedes.pdf>
@@ -491,15 +491,15 @@ Package pdftex.def Info: sedes.pdf  used on input line 6.
 (pdftex.def)             Requested size: 57.48257pt x 96.73918pt.
  [1
 
-{C:/Users/matsf/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <c:/Users/matsf/Documents/School/School_Shared/OneDrive/Schakeljaar/Sem2/Gegevensstructuren en algoritmen/Practica/Practicum_2/report/latex/sedes.pdf>]) ("c:/Users\matsf\Documents\School\School_Shared\OneDrive\Schakeljaar\Sem2\Gegevensstructuren en algoritmen\Practica\Practicum_2\report\latex\latex_report.toc")
+{C:/Users/matsf/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <c:/Users/matsf/Documents/School/School_Shared/OneDrive/Schakeljaar/Sem2/Gegevensstructuren en algoritmen/Practica/GegevensstructurenEnAlgoritmen/Practicum_2/report/latex/sedes.pdf>]) ("c:/Users\matsf\Documents\School\School_Shared\OneDrive\Schakeljaar\Sem2\Gegevensstructuren en algoritmen\Practica\GegevensstructurenEnAlgoritmen\Practicum_2\report\latex\latex_report.toc")
 \tf@toc=\write4
 \openout4 = `latex_report.toc'.
 
- ("c:/Users\matsf\Documents\School\School_Shared\OneDrive\Schakeljaar\Sem2\Gegevensstructuren en algoritmen\Practica\Practicum_2\report\latex\latex_report.lof")
+ ("c:/Users\matsf\Documents\School\School_Shared\OneDrive\Schakeljaar\Sem2\Gegevensstructuren en algoritmen\Practica\GegevensstructurenEnAlgoritmen\Practicum_2\report\latex\latex_report.lof")
 \tf@lof=\write5
 \openout5 = `latex_report.lof'.
 
- ("c:/Users\matsf\Documents\School\School_Shared\OneDrive\Schakeljaar\Sem2\Gegevensstructuren en algoritmen\Practica\Practicum_2\report\latex\latex_report.lot")
+ ("c:/Users\matsf\Documents\School\School_Shared\OneDrive\Schakeljaar\Sem2\Gegevensstructuren en algoritmen\Practica\GegevensstructurenEnAlgoritmen\Practicum_2\report\latex\latex_report.lot")
 \tf@lot=\write6
 \openout6 = `latex_report.lot'.
 
@@ -514,20 +514,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--46
  []
 
 [2] [3] [4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 118--124
+
+ []
+
+[6]
+Underfull \hbox (badness 4429) in paragraph at lines 138--138
+[][]\OT1/cmr/m/n/8 A* search al-go-rithm - Wiki-pe-dia. (2021). Be-zocht 20 April 2021, van
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--173
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 180--185
+
+ []
+
 No file latex_report.bbl.
-("c:/Users\matsf\Documents\School\School_Shared\OneDrive\Schakeljaar\Sem2\Gegevensstructuren en algoritmen\Practica\Practicum_2\report\latex\latex_report.aux") ) 
+[8] ("c:/Users\matsf\Documents\School\School_Shared\OneDrive\Schakeljaar\Sem2\Gegevensstructuren en algoritmen\Practica\GegevensstructurenEnAlgoritmen\Practicum_2\report\latex\latex_report.aux") ) 
 Here is how much of TeX's memory you used:
- 24937 strings out of 479799
- 637485 string characters out of 2869722
- 1016208 words of memory out of 3000000
- 41534 multiletter control sequences out of 15000+200000
- 538001 words of font info for 39 fonts, out of 3000000 for 9000
+ 25020 strings out of 479799
+ 639763 string characters out of 2869722
+ 1016207 words of memory out of 3000000
+ 41609 multiletter control sequences out of 15000+200000
+ 540620 words of font info for 48 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,9n,98p,868b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\matsf\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/matsf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/matsf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/matsf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/matsf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/matsf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/matsf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/matsf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/matsf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/matsf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/matsf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/matsf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on "c:/Users\matsf\Documents\School\School_Shared\OneDrive\Schakeljaar\Sem2\Gegevensstructuren en algoritmen\Practica\Practicum_2\report\latex\latex_report.pdf" (6 pages, 140388 bytes).
+ 94i,9n,98p,899b,692s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\matsf\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/matsf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/matsf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/matsf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/matsf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/matsf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/matsf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/matsf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/matsf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/matsf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/matsf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/matsf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/matsf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/matsf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/matsf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on "c:/Users\matsf\Documents\School\School_Shared\OneDrive\Schakeljaar\Sem2\Gegevensstructuren en algoritmen\Practica\GegevensstructurenEnAlgoritmen\Practicum_2\report\latex\latex_report.pdf" (9 pages, 186353 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
+ 100 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

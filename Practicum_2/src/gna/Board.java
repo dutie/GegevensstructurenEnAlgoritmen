@@ -93,7 +93,7 @@ public class Board {
 			newTiles[i - 1][j] = 0;
 
 			Board newBoard = new Board(newTiles, this);
-			if (!newBoard.equals(this.getPreviousState())) {
+			if (!newBoard.equals(this.getPreviousState()) && (newBoard.isSolvable())) {
 				neighboursCollection.add(newBoard);
 			}
 
@@ -105,7 +105,7 @@ public class Board {
 			newTiles[i + 1][j] = 0;
 
 			Board newBoard = new Board(newTiles, this);
-			if (!newBoard.equals(this.getPreviousState())) {
+			if (!newBoard.equals(this.getPreviousState())&& (newBoard.isSolvable())) {
 				neighboursCollection.add(newBoard);
 			}
 
@@ -117,7 +117,7 @@ public class Board {
 			newTiles[i][j - 1] = 0;
 
 			Board newBoard = new Board(newTiles, this);
-			if (!newBoard.equals(this.getPreviousState())) {
+			if (!newBoard.equals(this.getPreviousState())&& (newBoard.isSolvable())) {
 				neighboursCollection.add(newBoard);
 			}
 
@@ -129,7 +129,7 @@ public class Board {
 			newTiles[i][j + 1] = 0;
 
 			Board newBoard = new Board(newTiles, this);
-			if (!newBoard.equals(this.getPreviousState())) {
+			if (!newBoard.equals(this.getPreviousState())&& (newBoard.isSolvable())) {
 				neighboursCollection.add(newBoard);
 			}
 
@@ -310,8 +310,9 @@ public class Board {
 		else return this.manhattan();
 	}
 
-	public void updateMovesMade(int moves){
-		this.movesMade = moves;
+	public void updateMovesMade(Board state){
+		this.previousState = state;
+		this.movesMade = state.getMovesMade()+1;
 	}
 }
 

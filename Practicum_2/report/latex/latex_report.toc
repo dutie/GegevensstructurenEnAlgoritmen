@@ -4,4 +4,8 @@
 \contentsline {section}{\numberline {3}Resultaten}{3}{}%
 \contentsline {section}{\numberline {4}Bespreking van de resultaten}{4}{}%
 \contentsline {subsection}{\numberline {4.1}Complexiteit van de prioriteitsfuncties}{4}{}%
-\contentsline {subsection}{\numberline {4.2}Implementatie isSolvable}{4}{}%
+\contentsline {subsection}{\numberline {4.2}Implementatie isSolvable}{5}{}%
+\contentsline {subsection}{\numberline {4.3}Geheugengebruik}{6}{}%
+\contentsline {subsection}{\numberline {4.4}Tijdscomplexiteit}{6}{}%
+\contentsline {subsection}{\numberline {4.5}Verbeteringen op de prioriteitsfunctie(s)}{7}{}%
+\contentsline {subsection}{\numberline {4.6}Grotere puzzels}{8}{}%

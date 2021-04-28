@@ -63,15 +63,15 @@
                 puzzle32.txt & $32$ & $/$ & $2.170$\\
                 puzzle34.txt & $34$ & $/$ & $0.472$\\
                 puzzle36.txt & $36$ & $/$ & $4.272$\\
-                puzzle38.txt & $38$ & $/$ & $4.842$\\
-                puzzle40.txt & $40$ & $/$ & $2.245$\\
-                puzzle42.txt & $42$ & $/$ & $18.950$\\
+                puzzle38.txt & $38$ & $/$ & $50.830$\\
+                puzzle40.txt & $40$ & $/$ & $48.224$\\
+                puzzle42.txt & $42$ & $/$ & $74.591$\\
                 \bottomrule
             \end{tabular}
             \caption[Prestatie van het A* algoritme.]{Bevat het minimum aantal verplaatsingen om de doeltoestand te bereiken en,
                de uitvoeringstijd (in seconden) van het A* algoritme voor de Hamming en de Manhattan
                 prio-riteitsfuncties. Wanneer een oplossing niet binnen een redelijke
-                tijd (<5 minuten) gevonden kan worden, staat er een $/$.}
+                tijd ($< 5$ minuten) gevonden kan worden, staat er een $/$.}
             \label{tab:Prestatie A*}
         \end{table}
 
@@ -85,6 +85,8 @@
             \\Voor een bord van grootte $N$ hebben we 
             $N \times N$ arrayelementen. We moeten dus $N^2$ keer over het bord gaan. De complexiteit is dus voor beide $\sim N^2$.
            
+        \pagebreak
+
         \subsection{Implementatie isSolvable}
         De oplosbaarheid berekenen gebeurt als volgt:
         \begin{enumerate}
@@ -111,6 +113,76 @@
         
             
     \pagebreak
+
+        \subsection{Geheugengebruik}
+        Om de borden te onderzoeken, slaan we deze iteratief op in een rij. Wegens de isSolvable methode weten we dat niet alle bordposities opgeslagen zullen worden. 
+        Namenlijk, het resultaat van isSolvable van een bepaald bord kan of positief zijn, of negatief zijn. Van alle mogelijke borden, moeten we dus maar de helft effectief opslaan.
+        Neem een bord van grootte $N$, dit bord heeft $N \times N$ elementen en dus $N^2!$ aantal mogelijke bordposities. Net hebben we aangetoond dat we maar naar $\frac{1}{2}$ posities moeten kijken omdat, we geen borden gaan opslaan die niet oplosbaar zijn.
+        Dit leidt dan, in het slechtste geval, tot $\frac{N^2!}{2}$ opgeslagen bordposities in de prioriteitsrij.
+        \\
+        \\Dit maakt de zoekruimte enorm en bij een stijgende $N$, zal niet alleen het geheugengebruik toenemen, maar ook de runningtime.
+
+        \subsection{Tijdscomplexiteit}
+        Om de tijdscomplexiteit van de prioriteitsrij te bepalen, kijken we eerst naar hoe deze in Java geimplementeerd wordt.
+        Java gebruikt een Binary Heap datastructuur om een prioriteitsrij zijn functionaliteit te geven. De operaties van een heap zullen dus mee de tijdscomplexiteit bepalen.
+        We kijken naar de volgende gebruikte operaties:
+        \begin{itemize}
+            \item \textbf{Toon het element met de laagste kost:} Wegens dit element altijd op de eerste plaats in de rij staat en we moeten de rij niet aanpassen, gebeurt dit in constante tijd.
+            \item \textbf{Haal het element met de laagste kost op:} Nu moeten we het element uit de rij halen en hierdoor de prioriteitsrij aanpassen. Wegens het gebruik maakt van een binaire boom, hebben we maximum $2 \lg N$ vergelijkingen om de prioriteitsrij terug op te bouwen met het kleinste element bovenaan. Dit komt door het feit dat we telkens twee vergelijkingen doen voor elke node op het pad. Een om het kind met de kleinere waarde te vinden en de andere om te beslissen of dat kind gepromoveert moet worden of niet.
+            \item \textbf{Voeg een element met een kost toe:} De binaire structuur staat ons toe om in $\lg N$ tijd over alle elementen te gaan om het huidige element op de correct te plaatsen. Dit komt door het feit dat wanneer de hoogte met $1$ wordt verhoogd, zal $N$ zo verhoogd zijn om een macht van $2$ te bekomen en dan zal de hoogte van een binaire boom van een grootte $N$ gelijk zijn aan $\lfloor \lg N \rfloor$.
+        \end{itemize}
+        
+    \pagebreak
+
+        \subsection{Verbeteringen op de prioriteitsfunctie(s)}
+        Tijdens het testen van A* \footnote{A* search algorithm - Wikipedia. (2021). Bezocht 20 April 2021, van https://en.wikipedia.org/wiki/A*\_search\_algorithm}
+        met de heuristieken: Hamming en Manhattan, waren er al snel grote verschillen in snelheid gevonden. Later bleek zelfs dat enkele puzzels niet opgelost konden worden met Hamming. 
+        Hieruit kon de conclusie getrokken worden dan een betere heuristiek, een grote impact had. Dan kan de vraag gesteld worden, "is de manhattanfunctie wel de beste heuristiek voor dit probleem?"
+        \\Dit blijkt niet te zijn. Een voorbeeld (zie figuur 1), wanneer in een board twee tegels zijn, niet de nul-tegel, die fout staan en met elkaar gewisseld moeten worden. Dit is
+        niet mogelijk, hiervoor moet een tegel naar een andere rij verplaatst worden vooraleer de andere naar zijn correcte positie kan gaan. Dit heet een \textit{Linear Conflict}.
+       
+        \begin{figure}[ht]
+
+            \center
+
+            \begin{tikzpicture}
+                \draw[step=0.5cm,color=gray,scale=2] (-1,-1) grid (1,1);
+                \node at (-1.5,+1.5) {1};
+                \node at (-0.50,+1.5) {2};
+                \node at (+0.50,+1.5) {4 $\downarrow$};
+                \node at (+1.5,+1.5) {$\leftarrow$ 3};
+                \node at (-1.5,+0.5) {};
+                \node at (-0.5,+0.5) {};
+                \node at (+0.5,+0.5) {$\rightarrow$};
+                \node at (+1.5,+0.5) {$\uparrow$};
+                % ...
+                \node at (+1.5,-1.5) {};
+                
+            \end{tikzpicture}
+            \caption[Voorbeeld van Linear Conflict]{Toont een voorbeeldbord waar nummer 4 en 3 voor een Linear Conflict zorgen. Dit zorgt voor meer verplaatsingen dan andere zoals de pijlen aangeven.}
+            \label{fig:Linear Conflicts}
+        \end{figure}
+
+        Wegens dit voor meer verplaatsingen zorgt, moeten we de kost hier ook op aanpassen. We doen dit door bij beide tegels hun manhattansom twee op te tellen. 
+        Wanneer meerdere tegels zulk conflict hebben,
+        kunnen we de tegel die het meeste verplaatsingen zou moeten doen eerst wegnemen. Zo minimaliseren we de andere conflicten en verplaatsingen. Dit alles vermindert het geheugengebruik en de uitvoeringstijd
+        met een kleine factor die zichtbaar zal zijn, maar niet extreem groot zal zijn. Het nakijken van een Linear Conflict heeft een runningtime van $\sim n^3$ wegens we dit aantal moves moeten nakijken.
+        \\
+        \\Dit kunnen we opzichzelf nog eens verbeteren door enkel lijn conflicten na te kijken bij de betrokken kolom of rij loodrecht op de richting van de zet. Dit zorgt voor een runningtime van de linear conflicts van $\sim n^2$ in plaats van $\sim n^3$. 
+    \pagebreak
+
+    \subsection{Grotere puzzels}
+    Zoals in \'e\'en van de eerste lessen gezien, een beter algoritme is vaak de beste keuze. Wegens we nu al enkele geoptimaliseerde structuren gebruiken, is de vraag of dit nog steeds geld.
+    Wegens geheugen nu al snel een probleem is, kunnen we investeren in een computer met meer geheugen. Hier gaan we al snel tegen een muur botsten met een probleem met de tijd wegens deze niet versneld doordat we meer geheugen toevoegen.
+    
+    Wat we nu wel kunnen doen is gebruik maken van parallel programming. Voor alle mogelijke zetten, kunnen we een aparte thread toewijzen die dit efficient in parallel kan doen lopen.
+
+    Deze optimalisatie zal uiteindelijke ook uren en langer draaien voor grotere en/of ingewikkeldere puzzels. Als we nu ook nog eens meer tijd zouden geven, is dit niet per se een probleem, maar dit loopt al snel naar de jaren, wat dan weer niet mogelijk is 
+    wegens er nooit genoeg werkgeheugen kan bestaan.
+    \\
+    \\Hieruit valt af te leiden dat meer geheugen met een kleine optimalisatie al een mooi resultaat kan geven, maar dat het voor korte duur is. Dit komt door het feit dat
+    er altijd minstens een keer over alle elementen in elk bord gelopen moet worden, en het aantal elementen per bord een grootteorde van $N^2$ hebben. Voor grote $N$ krijgen we een $NP$-probleem, wat op dit moment nog niet praktisch op te lossen is.
+
     \bibliographystyle{plain}
     \bibliography{bibliografie}
 
