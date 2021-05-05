@@ -14,7 +14,7 @@ Aan assistenten: zie README.assistenten.txt
     <property name="boards.dir"  value="boards"/>
     <property name="main-class"  value="gna.Main"/>
     <property name="md5.empty.report" value="6068915a8b715aa265c217b499d3f309"/>
-    <property name="zipfilename" value="${build.dir}/firstname_lastname_studentnumber.zip"/>
+    <property name="zipfilename" value="build/Mats_Fockaert_r0695565.zip"/>
     
     <path id="classpath">
         <fileset dir="${lib.dir}" includes="**/*.jar"/>
