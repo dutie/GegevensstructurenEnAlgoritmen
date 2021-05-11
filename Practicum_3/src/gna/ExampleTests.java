@@ -25,7 +25,7 @@ public class ExampleTests {
         Board board = new Board(tiles, energy);
         boolean isSolvable = board.isSolvable();
         /* Check if isSolveable  */
-        String message = "Voor bord {{. . M . . .},{H M . . X X},{H . E . . E},{E E X . . .}} met begin-energie 6 zou je de finish niet mogen halen. Jij doet dat echter wel";
+        String message = "Voor bord {{. . M . . .},{H M . . X X},{H . E . . E},{E E X . . .}} met begin-energie 4 zou je de finish niet mogen halen. Jij doet dat echter wel";
         assertFalse(message, isSolvable);
     }
 
@@ -45,7 +45,7 @@ public class ExampleTests {
         Board board = new Board(tiles, energy);
         int energyAtFinish = board.getFinishTileEnergy();
         /* Check if finish tile energy is 2 */
-        String messageEnergy = "Voor bord {{. . M . . .},{H M . . X X},{H . E . . E},{E E X . . .}} met begin-energie 10 zou je nog 2 energie-punten over moeten hebben bij de finish. Bij jou is dat echter: " +  energyAtFinish;
+        String messageEnergy = "Voor bord {{. . M . . .},{H M . . X X},{H . E . . E},{E E X . . .}} met begin-energie 5 zou je nog 2 energie-punten over moeten hebben bij de finish. Bij jou is dat echter: " +  energyAtFinish;
         assertTrue(messageEnergy, energyAtFinish == 2);
     }
 
